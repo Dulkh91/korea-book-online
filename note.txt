@@ -1,0 +1,29 @@
+<template>
+    <div id="navi" :class="{'-translate-y-full':isHidden ,' translate-y-0':!isHidden}" 
+    class="bg-teal-300 fixed top-0 left-0 z-20 transition-transform w-full duration-150">
+        <div class="container mx-auto max-w-4xl py-1 text-blue-600">
+           <router-link to="/"><img class="w-8 md:w-10" src="../assets/image/home.svg" alt=""></router-link>
+        </div>
+    </div>
+</template>
+
+<script setup>
+import {ref,onMounted, onBeforeUnmount} from 'vue'
+const lastScrollTop = ref(0)
+const isHidden = ref(false)
+
+const handleScroll =()=>{
+    const scrollTop = window.pageYOffset
+   scrollTop> lastScrollTop.value? isHidden.value = true : isHidden.value = false
+    
+}
+
+onMounted(()=>
+    window.addEventListener('scroll', handleScroll)
+)
+onBeforeUnmount(()=>
+    window.addEventListener('scroll', handleScroll)
+)
+
+
+</script>
