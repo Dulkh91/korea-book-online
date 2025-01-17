@@ -13,13 +13,14 @@ const routes = [
     name: 'read',
     component: BookView
   },
+  /*
   {
     path: '/ads.txt',
     name: 'ads',
     beforeEnter: () => {
       window.location.href = '/ads.txt'
     }
-  },
+  }, */
   {
     path: '/:catchAll(.*)*',
     redirect: {name: 'home'}
