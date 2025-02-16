@@ -8,7 +8,7 @@
             <span>{{ currentBook.level }}</span>
         </p>
        
-       <div v-for="(url,index) in book" :key="index">
+       <div v-for="(url,index) in book" :key="index" class="flex justify-center">
         <img :src="url" alt="" >
        </div>
     </div>

@@ -20,7 +20,7 @@
         <router-link :to="({name: 'read', params:{id: itme.id}})" class="group">    
         <!-- <router-link :to="/read/+ itme.id" class="group"> -->
            <div class="bg-zinc-200 w-42 shadow-lg rounded-xl mb-6 p-1 space-y-3" >
-           <div class=" overflow-hidden">
+           <div class=" overflow-hidden flex justify-center">
             <img class="rounded-t-xl duration-200 group-hover:scale-105 group-hover:opacity-50 group-hover:rounded-t-xl" 
                :src="itme.cover_url" alt="">
            </div>
